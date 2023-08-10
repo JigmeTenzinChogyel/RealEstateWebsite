@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/924e6238fe.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style1.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!--menu starts-->
+  <section class="menu-bar">
+    <nav class="mainnav">
+      <div class="nav-logo">
+        <a href="index1.html">
+          <img src="image/logo1.png" />
+        </a>
+      </div>
+      <div class="nav-button">
+        <ul>
+          <li>
+            <a href="buy.html"><i class="fa-solid fa-credit-card"></i>BUY</a>
+          </li>
+          <li>
+            <a href="sell.html"><i class="fa-solid fa-money-check"></i>SELL</a>
+          </li>
+          <li>
+            <a href="rent.html"><i class="fa-solid fa-shop"></i>RENT</a>
+          </li>
+          <li>
+            <a href="about.html"><i class="fa-solid fa-address-card"></i>ABOUT US</a>
+          </li>
+          <li>
+            <button class="open-button" onclick="openForm()">
+              <i class="fa-solid fa-right-to-bracket"></i><span> SIGN IN</span>
+            </button>
+            <div id="Container-form-popup">
+              <div class="form-popup-1" id="myForm">
+                <div class="form-popup">
+                  <div>
+                    <form action="connect.php" method="post" class="form-container">
+                      <div>
+                        <button type="button" class="btn-cancel" onclick="closeForm1()">
+                          <i class="fa-solid fa-xmark"></i>
+                        </button>
+                      </div>
+                      <div>
+                        <h2>Log into RealEstate</h2>
+                      </div>
+                      <div>
+                        <input type="text" placeholder="Enter Email" name="email" required />
+                      </div>
+                      <div>
+                        <input type="password" placeholder="Enter Password" name="psw" required />
+                      </div>
+                      <div><button type="submit" class="btn">Login</button></div>
+                    </form>
+                  </div>
+                  <div class="account">
+                    <p>Don't have an account?</p>
+                    <button type="submit" class="btn-sign-up" onclick="SignUpForm()">
+                      Sign up!
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="form-popup-1" id="myForm-1">
+                <div class="form-popup">
+                  <form action="Connection.php" method="post" class="form-container">
+                    <div>
+                      <button type="button" class="btn-cancel" onclick="closeForm()">
+                        <i class="fa-solid fa-xmark"></i>
+                      </button>
+                    </div>
+                    <div>
+                      <h2>Sign up for RealEstate</h2>
+                    </div>
+                    <div>
+                      <input type="text" placeholder="Enter Full Name" name="name" required />
+                    </div>
+                    <div>
+                      <input type="text" placeholder="Enter Email" name="email" required />
+                    </div>
+                    <div>
+                      <input type="password" placeholder="Enter Password" name="psw" required />
+                    </div>
+                    <div><button type="submit" class="btn">Register</button></div>
+                  </form>
+                  <div class="account">
+                    <p>Already have an account?</p>
+                    <span><button type="submit" onclick="openForm1()" class="btn-sign-up">
+                        Log in!
+                      </button></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+  <!--menu ends-->
+  <!--home page-->
+  <section class="home-page">
+    <div class="ftext">
+      <h1>Home is where your story begins</h1>
+      <p>The ache for home lives in all of us</p>
+    </div>
+    <div class="home-nav">
+      <form action="#" class="home-nav2">
+        <div class="topnav">
+          <a href="#">Buy</a>
+          <a href="">Rent</a>
+        </div>
+        <div class="botnav">
+          <div>
+            <select>
+              <option disabled selected hidden>Property Type</option>
+              <option>Apartment</option>
+              <option>Bungalow</option>
+              <option>Cottage</option>
+              <option>Office</option>
+              <option>Shop</option>
+            </select>
+            <!--
+              <select id="selectbox1">
+                <option value="">Select an option&hellip;</option>
+                <option value="aye">Aye</option>
+                <option value="eh">Eh</option>
+                <option value="ooh">Ooh</option>
+                <option value="whoop">Whoop</option>
+              </select>
+              -->
+          </div>
+          <div>
+            <select>
+              <option disabled selected hidden>Location</option>
+              <option>Thimphu</option>
+              <option>Trongsa</option>
+              <option>Bumthang</option>
+            </select>
+            <!--
+              <select id="selectbox2">
+                <option value="">Month&hellip;</option>
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+              </select>
+              -->
+          </div>
+          <div>
+            <input type="text" placeholder=" $ Budget" />
+          </div>
+          <div>
+            <button type="submit">
+              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>Search
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!--services Section begins-->
+  <section class="services">
+    <div class="service-container">
+      <h2>Services</h2>
+      <div class="top-service">
+        <div>
+          <img src="image/buy-house.png" alt="" />
+          <h3>Buying</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+            quo explicabo obcaecati, atque exercitationem maxime ducimus
+            praesentium provident alias quas!
+          </p>
+          <button type="button">Learn More</button>
+        </div>
+        <div>
+          <img src="image/sell-home.png" alt="" />
+          <h3>Selling</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+            quo explicabo obcaecati, atque exercitationem maxime ducimus
+            praesentium provident alias quas!
+          </p>
+          <button type="button">Learn More</button>
+        </div>
+        <div>
+          <img src="image/rent-house.png" alt="" />
+          <h3>Renting</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+            quo explicabo obcaecati, atque exercitationem maxime ducimus
+            praesentium provident alias quas!
+          </p>
+          <button type="button">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--services Section ends-->
+  <!--Feature Section begins-->
+  <section class="features">
+    <h2>Properties</h2>
+    <div class="features-container">
+      <div class="feature1">
+        <div class="features-top1">
+          <a href="#" class="feature-para">NEW-5 HOURS AGO</a>
+        </div>
+        <div class="features-bot">
+          <div>
+            <p>$2500</p>
+            <a href="#"><i class="fa-solid fa-heart"></i></a>
+            <a href="#"><i class="fa-solid fa-message"></i></a>
+            <a href="#"><i class="fa-solid fa-phone"></i></a>
+          </div>
+          <div>
+            <p>2,777 sqft<i class="fa-solid fa-border-all"></i></p>
+            <p>2 bed<i class="fa-solid fa-bed"></i></p>
+            <p>2 bath<i class="fa-solid fa-bath"></i></p>
+          </div>
+          <div>
+            <a href="">Rent</a>
+            <a href="">Apartment</a>
+          </div>
+          <div>
+            <a href="">Location</a>
+          </div>
+        </div>
+      </div>
+      <div class="feature1">
+        <div class="features-top2">
+          <a href="#" class="feature-para">NEW-5 HOURS AGO</a>
+        </div>
+        <div class="features-bot">
+          <div>
+            <p>$2500</p>
+            <a href="#"><i class="fa-solid fa-heart"></i></a>
+            <a href="#"><i class="fa-solid fa-message"></i></a>
+            <a href="#"><i class="fa-solid fa-phone"></i></a>
+          </div>
+          <div>
+            <p>2,777 sqft<i class="fa-solid fa-border-all"></i></p>
+            <p>2 bed<i class="fa-solid fa-bed"></i></p>
+            <p>2 bath<i class="fa-solid fa-bath"></i></p>
+          </div>
+          <div>
+            <a href="">Rent</a>
+            <a href="">Apartment</a>
+          </div>
+          <div>
+            <a href="">Location</a>
+          </div>
+        </div>
+      </div>
+      <div class="feature1">
+        <div class="features-top3">
+          <a href="#" class="feature-para">NEW-5 HOURS AGO</a>
+        </div>
+        <div class="features-bot">
+          <div>
+            <p>$2500</p>
+            <a href="#"><i class="fa-solid fa-heart"></i></a>
+            <a href="#"><i class="fa-solid fa-message"></i></a>
+            <a href="#"><i class="fa-solid fa-phone"></i></a>
+          </div>
+          <div>
+            <p>2,777 sqft<i class="fa-solid fa-border-all"></i></p>
+            <p>2 bed<i class="fa-solid fa-bed"></i></p>
+            <p>2 bath<i class="fa-solid fa-bath"></i></p>
+          </div>
+          <div>
+            <a href="">Rent</a>
+            <a href="">Apartment</a>
+          </div>
+          <div>
+            <a href="">Location</a>
+          </div>
+        </div>
+      </div>
+      <div class="feature1">
+        <div class="features-top4">
+          <a href="#" class="feature-para">NEW-5 HOURS AGO</a>
+        </div>
+        <div class="features-bot">
+          <div>
+            <p>$2500</p>
+            <a href="#"><i class="fa-solid fa-heart"></i></a>
+            <a href="#"><i class="fa-solid fa-message"></i></a>
+            <a href="#"><i class="fa-solid fa-phone"></i></a>
+          </div>
+          <div>
+            <p>2,777 sqft<i class="fa-solid fa-border-all"></i></p>
+            <p>2 bed<i class="fa-solid fa-bed"></i></p>
+            <p>2 bath<i class="fa-solid fa-bath"></i></p>
+          </div>
+          <div>
+            <a href="">Rent</a>
+            <a href="">Apartment</a>
+          </div>
+          <div>
+            <a href="">Location</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="features-container">
+      <div class="feature1">
+        <div class="features-top1">
+          <a href="#" class="feature-para">NEW-5 HOURS AGO</a>
+        </div>
+        <div class="features-bot">
+          <div>
+            <p>$2500</p>
+            <a href="#"><i class="fa-solid fa-heart"></i></a>
+            <a href="#"><i class="fa-solid fa-message"></i></a>
+            <a href="#"><i class="fa-solid fa-phone"></i></a>
+          </div>
+          <div>
+            <p>2,777 sqft<i class="fa-solid fa-border-all"></i></p>
+            <p>2 bed<i class="fa-solid fa-bed"></i></p>
+            <p>2 bath<i class="fa-solid fa-bath"></i></p>
+          </div>
+          <div>
+            <a href="">Rent</a>
+            <a href="">Apartment</a>
+          </div>
+          <div>
+            <a href="">Location</a>
+          </div>
+        </div>
+      </div>
+      <div class="feature1">
+        <div class="features-top2">
+          <a href="#" class="feature-para">NEW-5 HOURS AGO</a>
+        </div>
+        <div class="features-bot">
+          <div>
+            <p>$2500</p>
+            <a href="#"><i class="fa-solid fa-heart"></i></a>
+            <a href="#"><i class="fa-solid fa-message"></i></a>
+            <a href="#"><i class="fa-solid fa-phone"></i></a>
+          </div>
+          <div>
+            <p>2,777 sqft<i class="fa-solid fa-border-all"></i></p>
+            <p>2 bed<i class="fa-solid fa-bed"></i></p>
+            <p>2 bath<i class="fa-solid fa-bath"></i></p>
+          </div>
+          <div>
+            <a href="">Rent</a>
+            <a href="">Apartment</a>
+          </div>
+          <div>
+            <a href="">Location</a>
+          </div>
+        </div>
+      </div>
+      <div class="feature1">
+        <div class="features-top3">
+          <a href="#" class="feature-para">NEW-5 HOURS AGO</a>
+        </div>
+        <div class="features-bot">
+          <div>
+            <p>$2500</p>
+            <a href="#"><i class="fa-solid fa-heart"></i></a>
+            <a href="#"><i class="fa-solid fa-message"></i></a>
+            <a href="#"><i class="fa-solid fa-phone"></i></a>
+          </div>
+          <div>
+            <p>2,777 sqft<i class="fa-solid fa-border-all"></i></p>
+            <p>2 bed<i class="fa-solid fa-bed"></i></p>
+            <p>2 bath<i class="fa-solid fa-bath"></i></p>
+          </div>
+          <div>
+            <a href="">Rent</a>
+            <a href="">Apartment</a>
+          </div>
+          <div>
+            <a href="">Location</a>
+          </div>
+        </div>
+      </div>
+      <div class="feature1">
+        <div class="features-top4">
+          <a href="#" class="feature-para">NEW-5 HOURS AGO</a>
+        </div>
+        <div class="features-bot">
+          <div>
+            <p>$2500</p>
+            <a href="#"><i class="fa-solid fa-heart"></i></a>
+            <a href="#"><i class="fa-solid fa-message"></i></a>
+            <a href="#"><i class="fa-solid fa-phone"></i></a>
+          </div>
+          <div>
+            <p>2,777 sqft<i class="fa-solid fa-border-all"></i></p>
+            <p>2 bed<i class="fa-solid fa-bed"></i></p>
+            <p>2 bath<i class="fa-solid fa-bath"></i></p>
+          </div>
+          <div>
+            <a href="">Rent</a>
+            <a href="">Apartment</a>
+          </div>
+          <div>
+            <a href="">Location</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Feature Section ends-->
+  <!--review section starts-->
+  <section class="review">
+    <div class="review-container">
+      <div class="review-left">
+        <div></div>
+        <div>
+          <p>Kinley Tenzin</p>
+          <p>Work Lorem ipsum dolor.</p>
+        </div>
+      </div>
+      <div class="review-right">
+        <div>
+          <h3>Reviews</h3>
+        </div>
+        <div class="review-right-mid">
+          <div>
+            <img src="image/quote-left.png" />
+          </div>
+          <div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Sunt?<br />Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Impedit?
+            </p>
+          </div>
+          <div>
+            <img src="image/quote-right.png" />
+          </div>
+        </div>
+        <div class="review-right-bot">
+          <button type="button">
+            <a href=""><i class="fa-solid fa-arrow-left"></i></a>
+          </button>
+          <button type="button">
+            <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--location Section start-->
+  <!--news Section start-->
+  <section class="news">
+    <div class="news-container">
+      <div>
+        <h3>News & Articles</h3>
+        <p>Know what's happening in the world of real estate</p>
+      </div>
+      <div class="news-0">
+        <div class="news-1">
+          <div class="news-1-div">
+            <div class="news-image-1"></div>
+            <div>
+              <a href="">Clients sue real estate company for breach of contract</a>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perspiciatis, fuga. Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+          </div>
+          <div class="news-2-div">
+            <div>Thukten Zangpo</div>
+            <div>October 30th, 2021</div>
+          </div>
+        </div>
+        <div class="news-1">
+          <div class="news-1-div">
+            <div class="news-image-2"></div>
+            <div>
+              <a href="">132 years sentence for real estate developer</a>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perspiciatis, fuga. Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+          </div>
+          <div class="news-2-div">
+            <div>Rinzin Wangchuk</div>
+            <div>March 14th, 2015</div>
+          </div>
+        </div>
+        <div class="news-1">
+          <div class="news-1-div">
+            <div class="news-image-3"></div>
+            <div>
+              <a href="">Glimpses of Bhutan’s future seen from Thimphu TechPark</a>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perspiciatis, fuga. Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+          </div>
+          <div class="news-2-div">
+            <div>Dechen Namgyel</div>
+            <div>January 12th, 2022</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--news Section end-->
+  <!--footer Section start-->
+  <section class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div>
+          <h3>Start buying and selling today!</h3>
+          <form action="#" class="form-1">
+            <div><input type="text" placeholder="Contact us!" /></div>
+            <button type="submit">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+        <div class="footer-image"></div>
+      </div>
+      <div class="footer-bot">
+        <div>
+          <img src="image/logo1.png" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
+            Aliquid, corporis?
+          </p>
+        </div>
+        <div>
+          <ul>
+            <li><a href="">FAQS</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="">Terms and Conditions</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <div>
+            <p>Follow us!</p>
+            <a href="" class="estate-email">estate@house.com</a>
+          </div>
+          <div>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--footer Section ends-->
+  <script src="index1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/924e6238fe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="sell.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!--menu starts-->
+    <section class="menu-bar">
+        <nav class="mainnav">
+            <div class="nav-logo">
+                <a href="index1.html">
+                    <img src="image/logo1.png" />
+                </a>
+            </div>
+            <div class="nav-button">
+                <ul>
+                    <li>
+                        <a href="buy.html"><i class="fa-solid fa-credit-card"></i>BUY</a>
+                    </li>
+                    <li>
+                        <a href="sell.html"><i class="fa-solid fa-money-check"></i>SELL</a>
+                    </li>
+                    <li>
+                        <a href="rent.html"><i class="fa-solid fa-shop"></i>RENT</a>
+                    </li>
+                    <li>
+                        <a href="about.html"><i class="fa-solid fa-address-card"></i>ABOUT US</a>
+                    </li>
+                    <li>
+                        <button class="open-button" onclick="openForm()">
+                            <i class="fa-solid fa-right-to-bracket"></i><span> SIGN IN</span>
+                        </button>
+                        <div id="Container-form-popup">
+                            <div class="form-popup-1" id="myForm">
+                              <div class="form-popup">
+                                <div>
+                                  <form action="/action_page.php" class="form-container">
+                                    <div>
+                                      <button type="button" class="btn-cancel" onclick="closeForm1()">
+                                        <i class="fa-solid fa-xmark"></i>
+                                      </button>
+                                    </div>
+                                    <div>
+                                      <h2>Log into RealEstate</h2>
+                                    </div>
+                                    <div>
+                                      <input type="text" placeholder="Enter Email" name="email" required />
+                                    </div>
+                                    <div>
+                                      <input type="password" placeholder="Enter Password" name="psw" required />
+                                    </div>
+                                    <div><button type="submit" class="btn">Login</button></div>
+                                  </form>
+                                </div>
+                                <div class="account">
+                                  <p>Don't have an account?</p>
+                                  <button type="submit" class="btn-sign-up" onclick="SignUpForm()">
+                                    Sign up!
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-popup-1" id="myForm-1">
+                              <div class="form-popup">
+                                <form action="/action_page.php" class="form-container">
+                                  <div>
+                                    <button type="button" class="btn-cancel" onclick="closeForm()">
+                                      <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                  </div>
+                                  <div>
+                                    <h2>Sign up for RealEstate</h2>
+                                  </div>
+                                  <div>
+                                    <input type="text" placeholder="Enter Full Name" name="name" required />
+                                  </div>
+                                  <div>
+                                    <input type="text" placeholder="Enter Email" name="email" required />
+                                  </div>
+                                  <div>
+                                    <input type="password" placeholder="Enter Password" name="psw" required />
+                                  </div>
+                                  <div><button type="submit" class="btn">Register</button></div>
+                                </form>
+                                <div class="account">
+                                  <p>Already have an account?</p>
+                                  <span><button type="submit" onclick="openForm1()" class="btn-sign-up">
+                                      Log in!
+                                    </button></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <!--menu ends-->
+    <!--sell Section end-->
+    <section class="sell-house-sec">
+        <div class="sell-house-container">
+            <h2>Sell Your House <span>Today!</span></h2>
+            <form action="#">
+                <div class="form-div-1">
+                    <label for="">Property Name: </label>
+                    <input type="text" placeholder="Enter Property Name" name="name" required />
+                    <label for="">Property Price: </label>
+                    <input type="text" placeholder="Enter Price" name="amount" required />
+                </div>
+                <div class="form-div-2">
+                    <label for="">Property Type: </label>
+                    <select name="property-type" id="">
+                        <option value="">Apartment</option>
+                        <option value="">Office</option>
+                    </select>
+                    <label for="">Property Location: </label>
+                    <select name="property-location" id="">
+                        <option value="">Thimphu</option>
+                        <option value="">Gasa</option>
+                        <option value="">Punakha</option>
+                    </select>
+                </div>
+                <div class="form-div-3">
+                    <div>
+                        <label for="Area">Area</label>
+                        <input type="text" required placeholder="Square"/>
+                        <label for="bed">No. of Bed Room</label>
+                        <input type="text" />
+                        <label for="Bath">No. of Bathroom</label>
+                        <input type="text" required />
+                    </div>
+                    <div>
+                        <label for="toilet">No. of Toilet</label>
+                        <input type="text" required />
+                        <label for="Kitchen">No. of Kitchen</label>
+                        <input type="text" required />
+                    </div>
+                </div>
+                <div class="form-div-4">
+                    <label for="img">Select image:</label>
+                    <input type="file" id="img" name="img" accept="image/*" required />
+                </div>
+                <div class="form-div-5">
+                    <div>
+                        <label for="">Description</label>
+                    </div>
+                    <textarea name="Description" rows="4" cols="50"></textarea>
+                </div>
+                <div class="form-div-6">
+                    <input type="Submit" />
+                </div>
+            </form>
+        </div>
+    </section>
+    <!--sell Section end-->
+    <!--footer Section start-->
+    <section class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div>
+                    <h3>Start buying and selling today!</h3>
+                    <form action="#" class="form-1">
+                        <div><input type="text" placeholder="Contact us!" /></div>
+                        <button type="submit">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="footer-image"></div>
+            </div>
+            <div class="footer-bot">
+                <div>
+                    <img src="image/logo1.png" />
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
+                        Aliquid, corporis?
+                    </p>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="">FAQS</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="">Terms and Conditions</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div>
+                        <p>Follow us!</p>
+                        <a href="" class="estate-email">estate@house.com</a>
+                    </div>
+                    <div>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--footer Section ends-->
+    <script src="index1.js"></script>
+</body>
+
+</html>

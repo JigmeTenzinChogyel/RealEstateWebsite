@@ -1,0 +1,378 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body{
+  background-color: #ccc;
+}
+/*Menu bar*/
+.nav-logo img {
+  margin-left: -10px;
+  width: 70px;
+  padding: 5px;
+}
+.mainnav {
+  margin-top: -7%;
+  z-index: 5;
+  position: fixed;
+  padding: 0.1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.824);
+  display: inline-flex;
+  width: 100%;
+  height: 13vh;
+  justify-content: space-between;
+}
+.mainnav .nav-button ul li:not(.subnav-1) {
+  display: inline-flex;
+  padding: 1rem 2rem;
+}
+.mainnav .nav-button ul li i {
+  margin: 0px 3px;
+}
+.mainnav .nav-button ul li a {
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.nav-button ul li:hover:not(:last-child) {
+  background-color: rgba(29, 125, 243, 0.589);
+  border-radius: 1px;
+  transition: 0.5s;
+}
+.nav-button ul li a:active {
+  color: rgb(255, 115, 0);
+}
+.nav-button ul li a i:hover {
+  transform: scale(1.3);
+  transition: 0.4s;
+}
+/*open form*/
+.open-button {
+  background-color: rgba(29, 125, 243, 0.589);
+  color: white;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 10rem;
+}
+.open-button span {
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+  color: rgb(255, 255, 255);
+}
+
+.form-popup-1{
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+}
+.form-popup {
+  position: absolute;
+  top: 10%;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 350px;
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.2);
+  z-index: 33;
+  background-color: white;
+  color: #000;
+}
+.form-popup .account {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.form-popup .account p {
+  margin: 5px 0;
+}
+/* Add styles to the form container */
+.form-container {
+  padding: 1rem;
+  background-color: white;
+  font-size: 13px;
+  color: #000;
+}
+.form-container div {
+  margin: 6px;
+}
+.form-container div:last-child p {
+  margin: 5px 0;
+}
+.form-container .btn-cancel {
+  padding: 1px;
+  margin-left: 90%;
+  width: 8%;
+}
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 100%;
+  border-radius: 4px;
+  padding: 20px 15px;
+  margin: 0.8rem 0;
+  border: none;
+  background: #f1f1f1;
+}
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: rgba(29, 125, 243, 0.863);
+  color: #000;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.9;
+  border-radius: 1rem;
+}
+.form-popup .btn-sign-up {
+  pointer-events: cursor;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: blue;
+  padding: 2px 0;
+  font-size: 15px;
+}
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+/*menu ends*/
+
+/*sell starts*/
+.sell-house-sec {
+  padding: 0.5rem;
+  width: 100%;
+  height: 70%;
+  margin-top: 7%;
+  margin-bottom: 1%;
+  text-align: center;
+}
+.sell-house-sec .sell-house-container{
+  position: relative;
+  left: 27%;
+  width: 50%;
+  padding: 1rem;
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.2);
+  background-color: rgb(255, 255, 255);
+}
+.sell-house-sec .sell-house-container h2{
+  margin: 4px;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+.sell-house-sec .sell-house-container h2 span{
+  color: orange;
+}
+.sell-house-sec .sell-house-container form div{
+  text-align: left;
+  margin: 1rem 0;
+}
+.sell-house-sec .sell-house-container form .form-div-1 input[type='text']{
+  margin: 0 2px;
+  outline: none;
+  padding: 5px;
+}
+.sell-house-sec .sell-house-container form .form-div-2 select{
+  width: 20%;
+  margin: 0 1rem;
+  outline: none;
+  padding: 6px;
+}
+.sell-house-sec .sell-house-container form .form-div-3 input[type='text']{
+  width: 10%;
+  margin: 1% 4% 1% 0;
+  outline: none;
+  padding: 4px;
+}
+.sell-house-sec .sell-house-container form .form-div-4 input[type='file']{
+  margin: 1% 8% 1% 0;
+  padding: 4px;
+}
+.sell-house-sec .sell-house-container form .form-div-5 label{
+  margin: 0 3% 0 0;
+}
+.sell-house-sec .sell-house-container form .form-div-5 textarea{
+  outline: none;
+  padding: 4px;
+}
+.sell-house-sec .sell-house-container form .form-div-6 input[type='submit']{
+  width: 10%;
+  outline: none;
+  padding: 4px;
+}
+
+/*sell ends*/
+
+/*footer section*/
+.footer-container {
+  background-color: black;
+  width: 100%;
+}
+.footer-top {
+  padding: 1rem;
+  height: 35vh;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.footer-top div:first-child {
+  display: inline-block;
+  width: 50%;
+}
+.footer-top div:first-child h3 {
+  word-spacing: 1px;
+  letter-spacing: 0.5px;
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+.footer-top div:first-child form {
+  margin-top: 1rem;
+  display: flex;
+}
+.footer-top div:first-child input {
+  color: #fff;
+  height: 3rem;
+  width: 100%;
+  background-color: #000;
+  border: none;
+  outline: none;
+  border-bottom: 1.3px solid rgba(255, 166, 0, 0.872);
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+.footer-top div:first-child input::placeholder {
+  color: rgb(196, 190, 190);
+  letter-spacing: 0.7px;
+}
+.footer-top div:first-child button {
+  margin-top: 3.2rem;
+  margin-left: 1rem;
+  background-color: #000;
+  border: none;
+  outline: none;
+  width: 4rem;
+  height: 2.5rem;
+}
+.footer-top div:first-child button:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+.footer-top div:first-child button i {
+  color: orange;
+  font-size: 2.5rem;
+}
+.footer-top div:last-child {
+  margin-right: 7rem;
+  width: 30%;
+  background-image: url(image/footer-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+.footer-bot {
+  padding: 1rem;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 30vh;
+}
+.footer-bot img {
+  margin-left: 1.5rem;
+  margin-top: 0.1rem;
+  padding: 10px;
+  width: 80px;
+}
+.footer-bot div:first-child {
+  width: 40%;
+}
+.footer-bot div:first-child p {
+  color: #fff;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  margin-left: 2rem;
+}
+.footer-bot div:nth-child(2) {
+  width: 15%;
+}
+.footer-bot div:nth-child(2) ul {
+  margin-top: 1.3rem;
+}
+.footer-bot div:nth-child(2) ul li {
+  margin-top: 0.7rem;
+  padding: 5px;
+  list-style: none;
+}
+.footer-bot div:nth-child(2) ul li a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+}
+.footer-bot div:nth-child(3) ul {
+  margin-left: -3rem;
+  margin-top: 1.3rem;
+}
+.footer-bot div:nth-child(3) ul li {
+  margin-top: 0.7rem;
+  padding: 5px;
+  list-style: none;
+}
+.footer-bot div:nth-child(3) ul li a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+}
+.footer-bot div:last-child {
+  margin-top: 8px;
+  display: block;
+  padding: 4px;
+  width: 20%;
+}
+.footer-bot div:last-child div:first-child {
+  height: 50%;
+  width: 100%;
+}
+.footer-bot div:last-child p {
+  color: #fff;
+  font-size: 15px;
+  padding: 10px 0px;
+}
+.footer-bot div:last-child .estate-email {
+  padding-left: 2rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+.footer-bot div:last-child div:last-child {
+  padding-left: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.footer-bot div:last-child div:last-child a {
+  text-decoration: none;
+  color: #fff;
+}
+/*footer ends*/

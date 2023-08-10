@@ -1,0 +1,430 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Square Peg", cursive;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+}
+/*menu starts*/
+.nav-logo img {
+  margin-left: -10px;
+  width: 70px;
+  padding: 5px;
+}
+
+.mainnav {
+  z-index: 5;
+  position: fixed;
+  padding: 0.1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.824);
+  display: inline-flex;
+  width: 100%;
+  height: 13vh;
+  justify-content: space-between;
+}
+.mainnav .nav-button ul li:not(.subnav-1) {
+  display: inline-flex;
+  padding: 1rem 2rem;
+}
+.mainnav .nav-button ul li i {
+  margin: 0px 3px;
+}
+.mainnav .nav-button ul li a {
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.nav-button ul li:hover:not(:last-child) {
+  background-color: rgba(29, 125, 243, 0.589);
+  border-radius: 1px;
+  transition: 0.5s;
+}
+.nav-button ul li a:active {
+  color: rgb(255, 115, 0);
+}
+.nav-button ul li a i:hover {
+  transform: scale(1.3);
+  transition: 0.4s;
+}
+/*open form*/
+.open-button {
+  background-color: rgba(29, 125, 243, 0.589);
+  color: white;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 10rem;
+}
+.open-button span {
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+  color: rgb(255, 255, 255);
+}
+.form-popup-1{
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+}
+.form-popup {
+  position: absolute;
+  top: 10%;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 350px;
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.2);
+  z-index: 33;
+  background-color: white;
+  color: #000;
+}
+.form-popup .account {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.form-popup .account p {
+  margin: 5px 0;
+}
+/* Add styles to the form container */
+.form-container {
+  padding: 1rem;
+  background-color: white;
+  font-size: 13px;
+  color: #000;
+}
+.form-container div {
+  margin: 6px;
+}
+.form-container div:last-child p {
+  margin: 5px 0;
+}
+.form-container .btn-cancel {
+  padding: 1px;
+  margin-left: 90%;
+  width: 8%;
+}
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 100%;
+  border-radius: 4px;
+  padding: 20px 15px;
+  margin: 0.8rem 0;
+  border: none;
+  background: #f1f1f1;
+}
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: rgba(29, 125, 243, 0.863);
+  color: #000;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.9;
+  border-radius: 1rem;
+}
+.form-popup .btn-sign-up {
+  pointer-events: cursor;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: blue;
+  padding: 2px 0;
+  font-size: 15px;
+}
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+/*men
+/*menu ends*/
+/*about starts*/
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+.container .infront {
+  position: absolute;
+  margin-top: 8%;
+  margin-left: -35%;
+  width: 50%;
+  height: 80vh;
+  background-color: #101820ff;
+  border: 1px solid #000;
+  box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.2);
+}
+.container .infront .img-1 {
+  border: none;
+  outline: none;
+  margin-top: 7%;
+  position: absolute;
+  width: 70%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(114, 122, 139, 0.674),
+      rgba(80, 90, 102, 0.521),
+      rgba(65, 80, 99, 0.5)
+    ),
+    url(image/ugyen.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container .infront .img-2 {
+  border: none;
+  outline: none;
+  margin-left: 25%;
+  margin-top: 13.5%;
+  position: absolute;
+  width: 75%;
+  height: 50vh;
+  background-image: url(image/ugyen.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container .infront .img-3 {
+  border: none;
+  outline: none;
+  margin-left: 45.1%;
+  margin-top: 26%;
+  position: absolute;
+  width: 55%;
+  height: 40vh;
+  background-color: #990000;
+}
+.container .infront h3 {
+  padding: 0px 1rem;
+  font-family: "Square Peg", cursive;
+  text-align: center;
+  margin: 1rem 0px;
+  font-size: 1.5rem;
+  color: rgb(254, 254, 254);
+}
+.container .infront p {
+  padding: 4px;
+  text-align: center;
+  margin: 1rem 0px;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+}
+.container .infront .ugyen {
+  color: #fee715ff;
+  text-align: left;
+  padding: 0px 1rem;
+  margin: 0.5rem 0px;
+  margin-right: 0.5rem;
+}
+.container .infront .ugyen p {
+  font-size: 1.3rem;
+  color: #000;
+}
+.container .infront h3 span {
+  color: #fee715ff;
+}
+.container .behind {
+  text-align: center;
+  margin-left: 45%;
+  width: 40%;
+  height: 135vh;
+  background-color: #fee715ff;
+  box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.2);
+  padding: 2rem 4.5rem;
+}
+.container .behind h3 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 1.9rem;
+  color: #000;
+}
+.container .behind h3 span {
+  color: rgb(0, 94, 255);
+}
+.container .behind p {
+  line-height: 1.5rem;
+  font-size: 15px;
+}
+.container .behind img {
+  padding: 4px;
+  margin: 0.5rem;
+  border: 2px solid blue;
+  height: 17vh;
+  width: 100px;
+  border-radius: 50%;
+}
+/*about ends*/
+/*footer starts*/
+.footer-container {
+  background-color: black;
+  width: 100%;
+}
+.footer-top {
+  padding: 1rem;
+  height: 35vh;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.footer-top div:first-child {
+  display: inline-block;
+  width: 50%;
+}
+.footer-top div:first-child h3 {
+  color: #fff;
+  word-spacing: 1px;
+  letter-spacing: 0.5px;
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+.footer-top div:first-child form {
+  margin-top: 1rem;
+  display: flex;
+}
+.footer-top div:first-child input {
+  color: #fff;
+  height: 3rem;
+  width: 100%;
+  background-color: #000;
+  border: none;
+  outline: none;
+  border-bottom: 1.3px solid rgba(255, 166, 0, 0.872);
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+.footer-top div:first-child input::placeholder {
+  color: rgb(196, 190, 190);
+  letter-spacing: 0.7px;
+}
+.footer-top div:first-child button {
+  margin-top: 3.2rem;
+  margin-left: 1rem;
+  background-color: #000;
+  border: none;
+  outline: none;
+  width: 4rem;
+  height: 2.5rem;
+}
+.footer-top div:first-child button:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+.footer-top div:first-child button i {
+  color: orange;
+  font-size: 2.5rem;
+}
+.footer-top div:last-child {
+  margin-right: 7rem;
+  width: 30%;
+  background-image: url(image/footer-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+.footer-bot {
+  padding: 1rem;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 30vh;
+}
+.footer-bot img {
+  margin-left: 1.5rem;
+  margin-top: 0.1rem;
+  padding: 10px;
+  width: 80px;
+}
+.footer-bot div:first-child {
+  width: 40%;
+}
+.footer-bot div:first-child p {
+  color: #fff;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  margin-left: 2rem;
+}
+.footer-bot div:nth-child(2) {
+  width: 15%;
+}
+.footer-bot div:nth-child(2) ul {
+  margin-top: 1.3rem;
+}
+.footer-bot div:nth-child(2) ul li {
+  margin-top: 0.7rem;
+  padding: 5px;
+  list-style: none;
+}
+.footer-bot div:nth-child(2) ul li a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+}
+.footer-bot div:nth-child(3) ul {
+  margin-left: -3rem;
+  margin-top: 1.3rem;
+}
+.footer-bot div:nth-child(3) ul li {
+  margin-top: 0.7rem;
+  padding: 5px;
+  list-style: none;
+}
+.footer-bot div:nth-child(3) ul li a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+}
+.footer-bot div:last-child {
+  margin-top: 8px;
+  display: block;
+  padding: 4px;
+  width: 20%;
+}
+.footer-bot div:last-child div:first-child {
+  height: 50%;
+  width: 100%;
+}
+.footer-bot div:last-child p {
+  color: #fff;
+  font-size: 15px;
+  padding: 10px 0px;
+}
+.footer-bot div:last-child .estate-email {
+  padding-left: 2rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+.footer-bot div:last-child div:last-child {
+  padding-left: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.footer-bot div:last-child div:last-child a {
+  text-decoration: none;
+  color: #fff;
+}
+/*footer ends*/
